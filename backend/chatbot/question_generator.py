@@ -3,9 +3,8 @@ from dotenv import load_dotenv
 from groq import Groq
 from pydantic import ValidationError
 
-from chatbot.prompts.prompts import get_system_prompt
-from chatbot.schemas.schemas import UserOutputSchema
-from history import add_user_message, add_assistant_message, get_history, trim_history
+from chatbot.prompts.question_prompts import get_system_prompt
+from chatbot.schemas.question_schemas import llmOutputSchema
 
 load_dotenv()
 
@@ -20,10 +19,9 @@ message_system = {
         "content" : prompt_system,
     }
 
-def llm_ans(prompt_user):
-    add_user_message(prompt_user)
+def llm_ques():
 
-    messages = [message_system] + get_history()
+    messages = [message_system]
 
     response = client.chat.completions.create(
         model=model,
@@ -32,10 +30,7 @@ def llm_ans(prompt_user):
     )
     ans = response.choices[0].message.content
     try:
-        validated_ans = UserOutputSchema.model_validate_json(ans)
-        add_assistant_message(validated_ans.output_text)
-        trim_history()
-        return validated_ans.output_text
+        validated_ans = llmOutputSchema.model_validate_json(ans)
+        return validated_ans.output_list  # Changed from output_text to output_list
     except ValidationError:
         return "Sorry, I had trouble generating a response. Please try again."
-

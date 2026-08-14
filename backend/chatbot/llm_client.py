@@ -5,7 +5,7 @@ from pydantic import ValidationError
 
 from chatbot.prompts.prompts import get_system_prompt
 from chatbot.schemas.schemas import UserOutputSchema
-from history import add_user_message, add_assistant_message, get_history, trim_history
+from chatbot.history import add_user_message, add_assistant_message, get_history, trim_history
 
 load_dotenv()
 

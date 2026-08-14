@@ -3,8 +3,10 @@ name = "backend"
 version = "0.1.0"
 requires-python = ">=3.12"
 dependencies = [
+    "fastapi>=0.141.1",
     "grok>=6.2",
     "groq>=1.6.0",
     "pydantic>=2.13.4",
     "python-dotenv>=1.2.2",
+    "uvicorn>=0.52.3",
 ]

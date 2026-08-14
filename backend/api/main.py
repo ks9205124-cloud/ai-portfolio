@@ -1,13 +1,18 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from api.routes import chat
-app = FastAPI()
+
+app = FastAPI(
+    title="AI Portfolio Chatbot API",
+    version="1.0.0"
+)
 
 app.include_router(chat.router)
 
 origins = [
     "http://localhost",
     "http://localhost:8080",
+    "http://localhost:3000",
 ]
 
 app.add_middleware(
@@ -17,3 +22,7 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+@app.get("/")
+async def root():
+    return {"status": "API is running successfully"}

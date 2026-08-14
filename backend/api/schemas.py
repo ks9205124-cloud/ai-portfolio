@@ -1,7 +1,11 @@
 from pydantic import BaseModel
+from typing import List
 
-class UserQuestion(BaseModel):
+class ChatRequest(BaseModel):
     message: str
 
-class ChatBotResponseQuestion(BaseModel):
-    question: list
+class ChatResponse(BaseModel):
+    response: str
+
+class SuggestedQuestionsResponse(BaseModel):
+    questions: List[str]

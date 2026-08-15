@@ -1,14 +1,14 @@
 const INFO = {
 	main: {
-		title: "Reactfolio by truethari",
-		name: "Tharindu N.",
-		email: "mail@tharindu.dev",
+		title: "portfolio",
+		name: "Shaurya Shukla",
+		email: "shawshuk007@gmail.com",
 		logo: "../logo.png",
 	},
 
 	socials: {
 		twitter: "https://twitter.com/",
-		github: "https://github.com/",
+		github: "https://github.com/ks9205124-cloud",
 		linkedin: "https://linkedin.com/",
 		instagram: "https://instagram.com/",
 		stackoverflow: "https://stackoverflow.com/",
@@ -16,67 +16,58 @@ const INFO = {
 	},
 
 	homepage: {
-		title: "Full-stack web and mobile app developer, and amateur astronaut.",
+		title: "Backend software engineer, AI engineering enthusiast, and Big-O whisperer.",
 		description:
-			"I am a backend developer with expertise in Node.js. I have experience in building scalable, secure and reliable web applications using various frameworks and technologies. I enjoy solving complex problems and learning new skills. I am passionate about creating high-quality code that follows best practices and industry standards. I am always looking for new challenges and opportunities to grow as a developer.",
+			"I'm a second-year CS student focused on backend development with Java and Spring Boot. I build things end-to-end — from a hand-written parser that analyzes code complexity, to a full OAuth2 authorization server, to an AI chatbot that answers questions about this very resume. I like understanding systems deeply rather than reaching for the easy shortcut, and I'm always looking for the next hard problem to work through.",
 	},
 
 	about: {
-		title: "I’m Tharindu N. I live in Sri Lanka, where I design the future.",
+		title: "I'm Shaurya. I'm a second-year CS student building real systems, not just following tutorials.",
 		description:
-			"I've worked on a variety of projects over the years and I'm proud of the progress I've made. Many of these projects are open-source and available for others to explore and contribute to. If you're interested in any of the projects I've worked on, please feel free to check out the code and suggest any improvements or enhancements you might have in mind. Collaborating with others is a great way to learn and grow, and I'm always open to new ideas and feedback.",
+			"I'm currently focused on backend engineering with Java and Spring Boot, while self-studying AI engineering (LLM APIs, prompt engineering, structured outputs) as a second track. My projects reflect a preference for depth over shortcuts — building a real AST-based parser instead of a heuristic, self-hosting OAuth2 instead of reaching for an external auth provider. My goal is a software engineering internship, and I'm always open to feedback, collaboration, or a good technical conversation.",
 	},
 
 	articles: {
-		title: "I'm passionate about pushing the boundaries of what's possible and inspiring the next generation of innovators.",
+		title: "Notes on backend engineering, AI systems, and the occasional deep dive into how things actually work.",
 		description:
-			"Chronological collection of my long-form thoughts on programming, leadership, product design, and more.",
+			"Thoughts on the projects I've built, design decisions I've made, and things I've learned the hard way.",
 	},
 
 	projects: [
 		{
-			title: "Project 1",
+			title: "Time Complexity Analyzer",
 			description:
-				"Lorem ipsum dolor sit amet. Et incidunt voluptatem ex tempore repellendus qui dicta nemo sit deleniti minima.",
-			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png",
+				"Analyzes source code and determines its Big O time complexity using a hand-written lexer and recursive-descent parser — builds a real AST and walks it to compute complexity, including detecting logarithmic patterns in loops. Spring Boot + MySQL backend, deployed live on Render.",
+			logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg",
 			linkText: "View Project",
-			link: "https://github.com",
+			link: "https://github.com/ks9205124-cloud/time-complexity-analyzer",
 		},
 
 		{
-			title: "Project 2",
+			title: "Expense Tracker",
 			description:
-				"Lorem ipsum dolor sit amet. Et incidunt voluptatem ex tempore repellendus qui dicta nemo sit deleniti minima.",
+				"Full-stack expense tracker with a self-hosted OAuth2 implementation — built as both an authorization server and resource server following Spring Security in Action, rather than using an external provider. Full Authorization Code + PKCE flow, Spring Boot backend, React frontend, containerized with Docker Compose.",
+			logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg",
+			linkText: "View Project",
+			link: "https://github.com/ks9205124-cloud/expenseTracker",
+		},
+
+		{
+			title: "Sudoku Solver",
+			description:
+				"A vanilla Java/Swing desktop app that solves Sudoku puzzles of dynamic n×n size — not fixed to the standard 9x9 grid. Uses a solve-first, then-hide-cells approach to generate puzzles.",
+			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/java/java.png",
+			linkText: "View Project",
+			link: "https://github.com/ks9205124-cloud/sudokuApp",
+		},
+
+		{
+			title: "AI Portfolio Chatbot",
+			description:
+				"The chatbot powering this very site — built in Python with the Groq API, structured and schema-validated responses via Pydantic, and conversation history management. Ask it anything about my background.",
 			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/python/python.png",
 			linkText: "View Project",
-			link: "https://github.com",
-		},
-
-		{
-			title: "Project 3",
-			description:
-				"Lorem ipsum dolor sit amet. Et incidunt voluptatem ex tempore repellendus qui dicta nemo sit deleniti minima.",
-			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/html/html.png",
-			linkText: "View Project",
-			link: "https://github.com",
-		},
-
-		{
-			title: "Project 4",
-			description:
-				"Lorem ipsum dolor sit amet. Et incidunt voluptatem ex tempore repellendus qui dicta nemo sit deleniti minima.",
-			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png",
-			linkText: "View Project",
-			link: "https://github.com",
-		},
-
-		{
-			title: "Project 5",
-			description:
-				"Lorem ipsum dolor sit amet. Et incidunt voluptatem ex tempore repellendus qui dicta nemo sit deleniti minima.",
-			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png",
-			linkText: "View Project",
-			link: "https://github.com",
+			link: "https://github.com/ks9205124-cloud/ai-portfolio",
 		},
 	],
 };

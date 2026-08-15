@@ -148,3 +148,47 @@
 		margin-right: -25px;
 	}
 }
+
+.homepage-chat-teaser {
+	width: 90%;
+	margin: 30px 0;
+}
+
+.homepage-chat-teaser-link {
+	text-decoration: none;
+}
+
+.homepage-chat-teaser-content {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	padding: 24px;
+	border-radius: 20px;
+	background: #fafafa;
+	transition: background-color 0.3s ease-in-out;
+}
+
+.homepage-chat-teaser-content:hover {
+	background: #f0f0f0;
+}
+
+.homepage-chat-teaser-dot {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: #22c55e;
+	animation: pulse 1.5s ease-in-out infinite;
+	flex-shrink: 0;
+}
+
+.homepage-chat-teaser-title {
+	color: var(--primary-color);
+	font-size: 16px;
+	font-weight: 700;
+}
+
+.homepage-chat-teaser-subtitle {
+	color: var(--secondary-color);
+	font-size: 13px;
+	margin-top: 4px;
+}

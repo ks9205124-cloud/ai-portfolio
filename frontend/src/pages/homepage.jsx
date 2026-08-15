@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
+import { Link } from "react-router-dom";
 
 import { faMailBulk } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -170,6 +171,22 @@ const Homepage = () => {
 							<AllProjects />
 						</div>
 
+						<div className="homepage-chat-teaser">
+							<Link to="/chat" className="homepage-chat-teaser-link">
+								<div className="homepage-chat-teaser-content">
+									<span className="homepage-chat-teaser-dot" />
+									<div>
+										<div className="homepage-chat-teaser-title">
+											Chat with my resume
+										</div>
+										<div className="homepage-chat-teaser-subtitle">
+											Ask my AI chatbot anything about my background, projects, or skills — live and interactive.
+										</div>
+									</div>
+								</div>
+							</Link>
+						</div>
+
 						<div className="homepage-after-title">
 							<div className="homepage-articles">
 								{myArticles.map((article, index) => (
@@ -186,10 +203,6 @@ const Homepage = () => {
 										/>
 									</div>
 								))}
-							</div>
-
-							<div className="homepage-works">
-								<Works />
 							</div>
 						</div>
 

@@ -50,6 +50,34 @@ const NavBar = (props) => {
 							</li>
 							<li
 								className={
+									active === "chat"
+										? "nav-item active"
+										: "nav-item"
+								}
+							>
+								<Link
+									to="/chat"
+									style={{
+										display: "flex",
+										alignItems: "center",
+										gap: "6px",
+									}}
+								>
+									Chat
+									<span
+										style={{
+											width: "8px",
+											height: "8px",
+											borderRadius: "50%",
+											backgroundColor: "#22c55e",
+											animation: "pulse 1.5s ease-in-out infinite",
+											display: "inline-block",
+										}}
+									/>
+								</Link>
+							</li>
+							<li
+								className={
 									active === "contact"
 										? "nav-item active"
 										: "nav-item"

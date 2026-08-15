@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+import INFO from "../../data/user";
+
 import "./styles/footer.css";
 
 const Footer = () => {
@@ -29,7 +31,7 @@ const Footer = () => {
 
 				<div className="footer-credits">
 					<div className="footer-credits-text">
-						© 2023 Tharindu.dev. All Rights Reserved.
+						© {new Date().getFullYear()} {INFO.main.name}. All Rights Reserved.
 					</div>
 				</div>
 			</div>
